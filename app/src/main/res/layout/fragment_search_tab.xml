@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#668DE6"
+    tools:context="com.thekarlbrown.changetheworld.SearchTab"
+    android:weightSum="1">
+
+    <TextView
+        android:textSize="40sp"
+        android:textColor="#1754E0"
+        android:text="@string/menu_search"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="2"
+        />
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/search_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="YaGoofed"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dip"
+        />
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/search_list"
+        android:layout_marginBottom="5dp"
+        android:background="#FFFFFF"
+        android:padding="5dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <include layout="@layout/bar_filter"
+        />
+</LinearLayout>

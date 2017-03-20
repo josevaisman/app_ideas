@@ -1,0 +1,246 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#668DE6"
+    tools:context="com.thekarlbrown.changetheworld.IdeaPage">
+    <TextView
+        android:textSize="40sp"
+        android:textColor="#1754E0"
+        android:text="@string/idea_title"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="2"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:id="@+id/page_idea_title"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dip"
+            android:layout_marginStart="5dip"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:id="@+id/page_idea_author"
+            android:textSize="20sp"
+            android:layout_marginRight="5dip"
+            android:layout_marginEnd="5dip"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="5dip"
+    android:layout_marginRight="5dip"
+    android:layout_marginEnd="5dip">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idea_category"
+            android:textSize="20sp"
+
+            android:layout_gravity="center_horizontal"
+            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:id="@+id/page_idea_category"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginEnd="5dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idea_subcategory"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_subcategory"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:layout_weight="3"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/page_idea_description"
+            android:maxLines = "30"
+            android:scrollbars = "vertical"
+            android:background="#FFFFFF"
+            android:layout_marginRight="5dip"
+            android:layout_marginEnd="5dip"
+            android:textColor="#000000"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+
+        android:layout_weight="0.10">
+        <Button
+            android:layout_width="68sp"
+
+            android:layout_height="match_parent"
+            android:id="@+id/page_idea_upselect"
+            android:gravity="center"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/page_idea_upvote"
+            android:textSize="10sp" />
+        <ImageView
+            android:gravity="center"
+            android:layout_gravity="start|center_vertical"
+            android:paddingLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumbsup"
+
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_tup"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="20sp"/>
+        <Button
+            android:layout_width="80sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:id="@+id/page_idea_downselect"
+            android:text="@string/page_idea_downvote"
+            android:textSize="10sp" />
+        <ImageView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumbsdown"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_tdown"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="20sp"/>
+        <Button
+            android:gravity="center"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="85sp"
+            android:layout_height="match_parent"
+            android:id="@+id/page_idea_favorite"
+            android:text="@string/page_idea_favorite"
+            android:textSize="10sp"/>
+        <ImageView
+            android:gravity="center"
+            android:layout_gravity="end|center_vertical"
+            android:clickable="true"
+            android:layout_width="40dp"
+            android:id="@+id/page_idea_favorite_image"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_top_bar"
+            android:focusable="false" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+
+
+        android:layout_weight="0.10">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_other"
+            android:text="@string/page_idea_other"
+
+            android:layout_gravity="center_vertical"
+            android:textSize="10sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_comment"
+            android:layout_gravity="center_vertical"
+            android:text="@string/page_idea_comment"
+            android:textSize="10sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_idea_follow"
+            android:layout_gravity="center_vertical"
+            android:text="@string/page_idea_follow"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+
+
+<include layout="@layout/fragment_comments_page"
+    android:layout_weight="4"
+    android:layout_width="fill_parent"
+    android:layout_height="0dip"></include>
+
+</LinearLayout>

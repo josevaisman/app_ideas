@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ctw="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:name=".MainActivity"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
+
+    <com.thekarlbrown.changetheworld.SplitToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00D9D9"
+        android:id="@+id/toolbar_top"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/current_tab"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
+
+</LinearLayout>

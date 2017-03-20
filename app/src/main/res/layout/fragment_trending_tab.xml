@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#668DE6"
+    tools:context="com.thekarlbrown.changetheworld.TrendingTab"
+    android:weightSum="1"
+    android:paddingBottom="5dip">
+
+    <TextView
+        android:textSize="40sp"
+        android:textColor="#1754E0"
+        android:text="@string/menu_trending"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="2"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/trending_list"
+        android:layout_marginBottom="5dip"
+        android:background="#FFFFFF"
+        android:padding="5dip"
+        android:layout_weight="1">
+
+    </ListView>
+    <include layout="@layout/bar_filter"
+        />
+    <include layout="@layout/bar_byarea"
+
+        />
+
+
+
+</LinearLayout>

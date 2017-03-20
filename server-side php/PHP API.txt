@@ -1,0 +1,117 @@
+--- API for PHP server side ---
+
+--- Final JSON Ready PHP Requests ---
+When data is returned, it comes in as a JSON array. Get methods are used universally. They can be called via my Web API for my project!
+
+//CNU latitude and longitude: 37.063941, -76.493730
+-- idea_addJSON.php --
+
+- title : Properly formatted string for idea title
+- username : username of idea creator
+- descrip : Properly formatted string description of the idea
+- cat : Category of the idea, starting at 1 
+- sub : Subcategory of the idea, starting at 1 
+- lat : Latitude of the user's location at submission, determined automatically and sent as a 6 decimal place double
+- long : Longitude of the user's location at submission, determined automatically and sent as a 6 decimal place double
+- state : State of the User, sent as a 2 char String State Code
+- country : Country of the user, sent as a 2 char String country code
+
+Add your idea to database, including your location and all necessary information
+
+-- favratd_byUserJSON.php --
+
+- ideaid : Database ideaid of the Idea in Question
+- username : Username of the User who we are obtaining favorite/thumb status of
+
+Show current favorite and thumb status of ideaid for user
+
+-- user_verifyPHash.php  --
+
+- username : Username of the User who we are verifying to Login
+- password : Password string query sent out to server
+
+Checks a users password against the hash stored on the server. Returns JSON verified 1 if accurate, verified 0 if incorrect or username doesn't exist
+
+-- user_addPHash.php --
+
+- email : Properly formatted email account for potential new account
+- username : Properly formatted username for potential new account
+- password : Properly formatted password for potential new account
+
+Adds a user account if possible to the database with username, email and password. Returns JSON created=1 if successful
+
+-- favorites_getListIdeasJSON.php --
+
+- username : Username who's favorites we are interested in
+
+Get list of ideas that the user has favorite'd
+ 
+
+//CNU latitude and longitude: 37.063941, -76.493730
+//Equirectangular approximation performed here!
+-- ideas_byAreaJSON.php -- 
+
+- lat : Latitude (6 trailing digit decimal)
+- long : Longitude (6 trailing digit decimal)
+- state : State Code (2 Char String)
+- country : Country Code (2 Char String)
+- username : Your username, if we are displaying based on favorite'd users list
+- case : Case to determine which location formula to use
+
+Case 0: List all ideas within 25 miles
+Case 1: List all ideas within 100 miles
+Case 2: List all ideas within the state
+Case 3: List all ideas within the country
+Case 4: List all ideas globally
+Case 5: List all ideas by users you have favorite'd
+
+-- ideas_byCatSubTimeJSON.php --
+
+- cat : Idea category, as integer starting at 1
+- sub : Idea subcategory, as integer starting at 1
+- case : The case to determine which time filter will be applied to the JSON data returned 
+
+Case 0: List all ideas from category/subcategory sorted by time filtering for added in last 24 hours
+Case 1: List all ideas from category/subcategory sorted by time filtering for added in last week
+Case 2: List all ideas from category/subcategory sorted by time filtering for added in last month
+Case 3: List all ideas from category/subcategory sorted by time filtering for added in last year
+Case 4: List all ideas from category/subcategory sorted by time not filtered (all time)
+
+-- ideas_bySearchJSON.php --
+
+- search : String of characters to be queried into MySQL idea database
+
+List ideas that have search string in title or description
+
+-- ideas_byUserJSON.php -- 
+
+- username : username of individual to show ideas of 
+
+List ideas by username in JSON format
+
+-- favratdJSON.php --
+
+- username : User currently altering favorited/thumbed ideas
+- ideaid : Specific idea in question
+- case : Case indicating the current operation
+
+Case 0: Remove user favoriting ideaid
+Case 1: Add user favoriting ideaid
+Case 2: Remove user liking idea
+Case 3: Add user thumbs uping idea
+Case 4: Add user thumbs downing idea
+
+-- friends_getIdeaListJSON.php --
+
+- username : username which will have ideas of followed users displayed
+
+Get a JSON array of the ideas from each of the followed users of any given user
+
+-- follower_JSON.php --
+
+- username : Username in question who's follower list we are examining
+- follower : User who is followed or removed as a follower
+- case : Are we adding or removing the follower
+
+Case 0: Remove as a follower (if possible)
+Case 1: Add as a follower (if possible)
